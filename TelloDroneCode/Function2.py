@@ -1,9 +1,9 @@
 from djitellopy import Tello
 
 tello = Tello()
-tello.connect
+tello.connect()
 
-distance = Tello.get_distance_tof()
+#distance = Tello.get_distance_tof()
 
 tello.takeoff()
 
