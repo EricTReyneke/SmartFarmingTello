@@ -38,7 +38,7 @@ def Connection():
     connection = mysql.connector.connect(host='localhost',
                                          database='prj381_group20',
                                          user='root',
-                                         password='')
+                                         password='Foefiefa@C1')
 
     sql_select_Query = "select Status from Route"
     cursor = connection.cursor()
@@ -47,6 +47,9 @@ def Connection():
     records = cursor.fetchall()
     print("Total number of rows in table: ", cursor.rowcount)
 
-    checkFly = records[0]
+    checkFly = records
 
+    for rows in records:
+        checkFly = rows["Status"]
+    print(checkFly)
 Connection()
