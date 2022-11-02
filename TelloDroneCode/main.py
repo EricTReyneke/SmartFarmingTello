@@ -49,4 +49,7 @@ def Connection():
 
     checkFly = records[0]
 
+    for rows in records:
+        checkFly = rows["Status"]
+
 Connection()
